@@ -30,6 +30,7 @@ group :development do
 
   gem "spring"
   gem "spring-commands-rspec"
+  gem "pry-rails"
 end
 
 group :development, :test do
