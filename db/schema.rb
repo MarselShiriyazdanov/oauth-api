@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20161025114631) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "gender"
+    t.string   "gender",                 default: ""
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
