@@ -34,5 +34,9 @@ module RailsBaseApi
     # Disable default Rails headers which do not make sense in
     # API-only project (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options)
     config.action_dispatch.default_headers = {}
+    # for omniauth
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end
