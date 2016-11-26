@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       post "users/sign_up", to: "registrations#create"
       get "users/me", to: "users#me"
       put "users", to: "users#update"
+
+      resource :passwords, only: %i(update)
     end
   end
 
