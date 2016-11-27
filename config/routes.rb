@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       put "users", to: "users#update"
 
       resource :passwords, only: %i(update)
+      resources :identities, only: :destroy
     end
   end
 
