@@ -266,4 +266,10 @@ Devise.setup do |config|
     scope: ["plus.login", "plus.me", "userinfo.email", "userinfo.profile"],
     provider_ignores_state: true,
     redirect_uri: "postmessage"
+
+  config.omniauth :facebook,
+    ENV.fetch("FACEBOOK_APP_ID"),
+    ENV.fetch("FACEBOOK_APP_SECRET"),
+    provider_ignores_state: true,
+    info_fields: "email, name, gender, first_name, last_name, verified"
 end

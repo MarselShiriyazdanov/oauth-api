@@ -23,6 +23,7 @@ gem "seedbank"
 gem "simple_token_authentication"
 gem "thin"
 gem "omniauth-google-oauth2"
+gem "omniauth-facebook"
 
 group :development do
   gem "letter_opener"

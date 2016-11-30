@@ -2,12 +2,14 @@ module V1
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     acts_as_token_authentication_handler_for User, only: []
 
-    def google_oauth2
-      if auth_verified?
-        current_user ? connect_identity : process_sign_in
-        respond_with current_user, serializer: SessionSerializer
-      else
-        render nothing: true, status: 403
+    Identity::PROVIDERS.each do |provider|
+      define_method(provider) do
+        if auth_verified?
+          current_user ? connect_identity : process_sign_in
+          respond_with current_user, serializer: SessionSerializer
+        else
+          render nothing: true, status: 403
+        end
       end
     end
 
