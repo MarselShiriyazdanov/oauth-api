@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope defaults: { format: :json } do
-    devise_for :users, only: []
+    devise_for :users, only: [:confirmations]
   end
 
   namespace :v1, defaults: { format: "json" } do

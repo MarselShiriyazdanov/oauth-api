@@ -5,7 +5,7 @@ class ConnectIdentity
 
   def call
     update_or_create_identity
-    #confirm_user
+    confirm_user
   end
 
   private

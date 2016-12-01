@@ -5,7 +5,7 @@ class CreateUserFromAuth
 
   def call
     user = User.new(user_params)
-    #user.skip_confirmation!
+    user.skip_confirmation!
     user.save!
     context.user = user
   end

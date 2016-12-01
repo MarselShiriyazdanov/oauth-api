@@ -7,7 +7,7 @@ class FindUserByEmail
     return unless user
 
     create_identity
-    # user.confirm unless user.confirmed?
+    user.confirm unless user.confirmed?
     context.user = user
   end
 
