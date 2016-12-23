@@ -1,0 +1,38 @@
+{
+  "resource": "Omniauth Callbacks",
+  "http_method": "GET",
+  "route": "/users/auth/:provider/callback",
+  "description": "User email is not verified",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "provider",
+      "description": "Provider"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users/auth/facebook/callback",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 403,
+      "response_status_text": "Forbidden",
+      "response_body": null,
+      "response_headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      },
+      "response_content_type": "text/plain; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/users/auth/facebook/callback\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user@example.com\""
+    }
+  ]
+}

@@ -1,6 +1,61 @@
 {
   "resources": [
     {
+      "name": "Omniauth Callbacks",
+      "examples": [
+        {
+          "description": "Connect identity",
+          "link": "omniauth_callbacks/connect_identity.json",
+          "groups": "all"
+        },
+        {
+          "description": "User email is not verified",
+          "link": "omniauth_callbacks/user_email_is_not_verified.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create new identity",
+          "link": "omniauth_callbacks/create_new_identity.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Password",
+      "examples": [
+        {
+          "description": "Set password",
+          "link": "password/set_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Identities",
+      "examples": [
+        {
+          "description": "Remove identity",
+          "link": "identities/remove_identity.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Errors",
       "examples": [
         {
@@ -11,16 +66,16 @@
       ]
     },
     {
-      "name": "Sessions",
+      "name": "Registrations",
       "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Sign up with valid params",
+          "link": "registrations/sign_up_with_valid_params.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Sign up with invalid params",
+          "link": "registrations/sign_up_with_invalid_params.json",
           "groups": "all"
         }
       ]

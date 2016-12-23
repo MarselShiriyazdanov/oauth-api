@@ -1,8 +1,8 @@
 {
-  "resource": "Sessions",
+  "resource": "Registrations",
   "http_method": "POST",
-  "route": "/v1/users/sign_in",
-  "description": "Sign in with valid password",
+  "route": "/v1/users/sign_up",
+  "description": "Sign up with valid params",
   "explanation": null,
   "parameters": [
     {
@@ -14,6 +14,11 @@
       "required": true,
       "name": "password",
       "description": "Password"
+    },
+    {
+      "required": true,
+      "name": "password_confirmation",
+      "description": "Password confirmation"
     }
   ],
   "response_fields": [
@@ -22,8 +27,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/v1/users/sign_in",
-      "request_body": "email=user2%40example.com&password=123456",
+      "request_path": "/v1/users/sign_up",
+      "request_body": "email=user%40example.com&password=123456&password_confirmation=123456",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -32,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"user\":{\"id\":5,\"email\":\"user2@example.com\",\"identities\":[],\"authentication_token\":\"LB7Rm_nMEDPAqcjUfSzD\",\"reset_password_token\":null}}",
+      "response_body": "{\"user\":{\"id\":8,\"email\":\"user@example.com\",\"identities\":[],\"authentication_token\":\"fcgNxNW1DC_SxNso7x76\",\"reset_password_token\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users/sign_in\" -d 'email=user2%40example.com&password=123456' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users/sign_up\" -d 'email=user%40example.com&password=123456&password_confirmation=123456' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
